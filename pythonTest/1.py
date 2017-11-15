@@ -147,7 +147,33 @@ while n < 100:
 print('END')
 
 ###########################################################################################
-# dict  (dictionary)(map)
+# dict  (dictionary)(相当于map)
 d = {'Michael': 95, 'Bob': 85, 'Tracy': 54}
 print(d['Michael'])
 print(('nick' in d))
+d['Bob'] = 17
+print(d['Bob'])
+# 下行如果没有,则输出none
+print(d.get('nick'))
+# 下行如果没有,则输出指定的数值(这里是-1)
+print(d.get('nick', -1))
+
+# set
+# set只有非重复的key, 无value
+# 新建set需要提供一个list,且会把里面重复的祛除
+s = set([1, 2, 3])
+print(s)
+s.add(4)
+print(s)
+s.remove(4)
+print(s)
+
+
+a = ['c', 'b', 'a']
+a.sort()
+print(a)
+
+
+
+
+
