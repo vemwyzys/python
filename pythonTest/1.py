@@ -173,7 +173,26 @@ a = ['c', 'b', 'a']
 a.sort()
 print(a)
 
+t = (1, 2, 3)
+d = {t, }
+print(d)
+s = set(t)
+print(s)
+
+d = {s, }
+print('hh')
+print(d)
 
 
-
-
+t1 = (1, [2, 4])
+# t这个tople中有list,list是可变的,所以放不进dict中(因 unhashable)
+# d = {t1, }
+# print(d)
+#
+# set初始化的时候需要一个list传入值, 但是元组内有list不行,
+# set初始化可list传入可能是一种官方的便捷方法而已,实际set内部放入的是list经过转化后的值(哈希,无序,不重复)
+# set本身是无须排列的可哈希的值,  不可放入dict
+# s1 = set(t1)
+# print('hh')
+# print(s1)
+# print('hh')
