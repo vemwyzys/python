@@ -84,3 +84,15 @@ print(quadratic(6, 6, 0))
 print('第3例')
 print(quadratic(0, 6, 6))
 
+
+# 计算次方,默认次幂为2
+def power(x, n=2):
+    s = 1
+    while n > 0 :
+        n = n-1
+        s = s*x
+    return s
+
+
+print(power(3))
+
