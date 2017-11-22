@@ -226,3 +226,47 @@ def f1(a, b, c=0, *args, **kw):
 
 
 print(f1(1, 2))
+
+
+# 计算多个数的乘积
+def product(*nums):
+    if nums is None or len(nums) <= 0:
+        return "无参数"
+    product = 1
+    for num in nums:
+        product = product * num
+    return product
+
+
+print(product(3, 9))
+print(product())
+
+
+# 递归函数
+def fact(n):
+    if n ==1:
+        return 1
+    return n*fact(n - 1)
+
+
+print(fact(3))
+
+
+def pickupliyu(depth):
+    print("抱着")
+    if depth == 0:
+        print("我的小鲤鱼")
+    else:
+        pickupliyu(depth - 1)
+    print("的我")
+
+
+print("吓得我抱起了 ")
+pickupliyu(4)
+
+L = []
+n = 1
+while n <= 19:
+    L.append(n)
+    n = n + 2
+print(L)
